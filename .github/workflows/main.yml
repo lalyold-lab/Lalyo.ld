@@ -1,0 +1,22 @@
+
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check repository
+        run: |
+          echo "Проверка на файловете в хранилището"
+          ls -la
+          echo "Няма готов Android проект за компилиране."
